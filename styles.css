@@ -1,0 +1,155 @@
+:root {
+    /* Paleta de Colores Modernos */
+    --primary-color: #1374a1; /* Azul Cyan */
+    --primary-hover: #0284c7;
+    --secondary-color: #019664; /* Verde Esmeralda para "Pagado/Éxito" */
+    --bg-color: #f1f5f9; /* Fondo gris muy claro */
+    --surface-color: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --border-radius: 8px; /* Esquinas rectas pero sutilmente suavizadas */
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover)) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #e2e8f0;
+}
+.nav-tabs .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+}
+.nav-tabs .nav-link:hover {
+    color: var(--primary-hover);
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active {
+    font-weight: 700;
+    color: var(--primary-hover);
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 3px solid var(--primary-hover);
+}
+
+/* Contenedor de Tabla */
+.table-responsive {
+    background: var(--surface-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.025);
+    border: 1px solid #e2e8f0;
+}
+
+/* Tabla */
+.table { margin-bottom: 0; }
+.table thead th {
+    background-color: var(--surface-color) !important;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e2e8f0 !important;
+    padding: 15px;
+}
+.table tbody td {
+    vertical-align: middle;
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text-color);
+}
+
+/* Botones */
+.btn {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    border: none;
+}
+.btn:active { transform: scale(0.97); }
+.btn-primary, .btn-info {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+.btn-primary:hover, .btn-info:hover {
+    background-color: var(--primary-hover) !important;
+    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+}
+.btn-success {
+    background-color: var(--secondary-color) !important;
+}
+.btn-success:hover {
+    background-color: #059669 !important; /* Verde más oscuro */
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+/* Inputs */
+.form-control, .form-select {
+    border-radius: var(--border-radius);
+    border: 1px solid #cbd5e1;
+    padding: 10px 15px;
+    box-shadow: none !important;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15) !important;
+}
+
+/* Modales y Flashcard */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+.modal-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 24px;
+}
+/* Estilo específico para la Flashcard */
+#flashcardModal .modal-content {
+    background-color: #f8fafc;
+}
+#flashcardModal .modal-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover)) !important;
+    color: white;
+    border-bottom: none;
+    padding: 20px;
+}
+#flashcardModal .modal-title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+#flashcardContent {
+    padding: 24px;
+}
+#flashcardContent p { margin-bottom: 8px; font-size: 0.95rem; }
+#flashcardContent strong { color: var(--text-muted); font-weight: 500; display: inline-block; width: 90px; }
+#flashcardContent hr { border-color: #cbd5e1; margin: 15px 0; }
+
+/* Loader */
+#loader {
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    z-index: 1060; background: white; padding: 20px; border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
